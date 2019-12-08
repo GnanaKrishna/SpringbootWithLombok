@@ -18,7 +18,7 @@ class BookListener {
             bindings = @QueueBinding(
                     exchange = @Exchange(value = "#{consumerProperties.exchange}", type = "topic"),
                     value = @Queue(value = "#{consumerProperties.queue}"),
-                    key = "#{consumerProperties.routingKey}"
+                    key = "#{consumerProperties.routingKey}" 
             )
     )
     void listen(Book article) {
